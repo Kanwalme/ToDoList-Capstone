@@ -25,7 +25,7 @@ public class ToDo {
     private String date;
 
     @Column
-    private boolean completed;
+    private Boolean completed;
 
 
     @ManyToOne
@@ -39,9 +39,8 @@ public class ToDo {
         if (toDoDto.getDate() != null) {
             this.date = toDoDto.getDate();
         }
-        if (toDoDto.isCompleted()== false) {
-            this.completed = toDoDto.isCompleted();
-        }
+        this.completed = toDoDto.getCompleted();
+
     }
 }
 
