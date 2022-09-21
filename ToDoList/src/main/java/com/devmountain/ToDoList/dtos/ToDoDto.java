@@ -29,7 +29,8 @@ public class ToDoDto implements Serializable {
         if (toDo.getDate() != null) {
             this.date = toDo.getDate();
         }
-            this.completed = toDo.getCompleted();
+       this.completed = toDo.getCompleted();
+//        this.completed = false;
         }
 
     }

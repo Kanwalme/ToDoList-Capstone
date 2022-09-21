@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ToDo")
+@Table(name = "to_do")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
