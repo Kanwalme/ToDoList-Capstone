@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/v1/toDo")
 public class ToDoController {
 @Autowired
     private ToDoService toDoService;

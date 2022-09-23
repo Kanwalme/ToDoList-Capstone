@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/To-Do List Capstone.iml" filepath="$PROJECT_DIR$/To-Do List Capstone.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ToDoList/ToDoList.iml" filepath="$PROJECT_DIR$/ToDoList/ToDoList.iml" />
     </modules>
   </component>
 </project>
