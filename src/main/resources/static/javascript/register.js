@@ -16,18 +16,18 @@ const handleSubmit = async (e) =>{
         password: registerPassword.value
     }
 
-    const response = await fetch(${baseUrl}/register, {
+    const response = await fetch('${baseUrl}/register', {
     method: "POST",
         body: JSON.stringify(bodyObj),
         headers: headers
-})
-.catch(err => console.error(err.message))
+    })
+    .catch(err => console.error(err.message))
 
-const responseArr = await response.json()
+    const responseArr = await response.json()
 
-if (response.status === 200){
-    window.location.replace(responseArr[0])
-}
+    if (response.status === 200){
+        window.location.replace(responseArr[0])
+    }
 }
 
 registerForm.addEventListener("submit", handleSubmit)
