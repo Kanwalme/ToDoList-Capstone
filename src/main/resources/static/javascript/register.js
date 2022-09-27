@@ -1,3 +1,4 @@
+
 const registerForm = document.getElementById('register-form')
 const registerUsername = document.getElementById('register-username')
 const registerPassword = document.getElementById('register-password')
@@ -8,6 +9,7 @@ const headers = {
 
 const baseUrl = 'http://localhost:8080/api/v1/users'
 
+
 const handleSubmit = async (e) =>{
     e.preventDefault()
 
@@ -16,18 +18,23 @@ const handleSubmit = async (e) =>{
         password: registerPassword.value
     }
 
-    const response = await fetch('${baseUrl}/register', {
-    method: "POST",
+    const response = await fetch(`${baseUrl}/register`, {
+        method: "POST",
         body: JSON.stringify(bodyObj),
         headers: headers
+
     })
-    .catch(err => console.error(err.message))
+        .then(()=>console.log("successfully ran"))
+        .catch(err => console.error(err.message))
 
     const responseArr = await response.json()
 
     if (response.status === 200){
         window.location.replace(responseArr[0])
+        console.log("code 200")
     }
 }
 
 registerForm.addEventListener("submit", handleSubmit)
+
+

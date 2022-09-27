@@ -21,26 +21,26 @@ public class ToDo {
     @Column(columnDefinition = "text")
     private String item;
 
-    @Column
-    private String date;
-
-    @Column
-    private Boolean completed;
+//    @Column
+//    private String date;
+//
+//    @Column
+//    private Boolean completed;
 
 
     @ManyToOne
     @JsonBackReference
     private User user;
 
-    public ToDo(ToDoDto toDoDto){
+    public ToDo(ToDoDto toDoDto) {
         if (toDoDto.getItem() != null) {
             this.item = toDoDto.getItem();
         }
-        if (toDoDto.getDate() != null) {
-            this.date = toDoDto.getDate();
-        }
-        this.completed = toDoDto.getCompleted();
-
+//        if (toDoDto.getDate() != null) {
+//            this.date = toDoDto.getDate();
+//        }
+//        this.completed = toDoDto.getCompleted();
+//
     }
 }
 
