@@ -10,7 +10,13 @@
     <title>Home</title>
 </head>
 <body>
-<a class="btn navbar-btn btn-default" href="./login.html" onclick="handleLogout()">Logout</a>
+<!--<a class="btn navbar-btn btn-default" href="./login.html" onclick="handleLogout()">Logout</a>-->
+
+<div class="topnav">
+    <!-- Navbar -->
+    <!-- logo created on https://www.freelogodesign.org/ -->
+    <a href="/login.html">Logout</a>
+</div>
 
 <div class="container" id="home-container">
     <div class="row">
@@ -46,7 +52,6 @@
                     </div>
 </div>
 <!--modal-->
-
                     <div class="modal fade" id="todo-edit-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="todo-edit-modal-title" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -69,6 +74,22 @@
         </div>
     </div>
 </div>
+
+<!--<header>-->
+<!--    <h1>To Do List</h1>-->
+<!--    <form id="new-todo-form">-->
+<!--        <input type="text" name="new-todo-input" id="new-todo-input placeholder="New Task..." />-->
+<!--        <input type="submit" id="new-todo-submit"  value="Add" />-->
+<!--    </form>-->
+<!--</header>-->
+<!--<main>-->
+<!--    <section class="todo-list">-->
+<!--        <h2>Today's Tasks</h2>-->
+
+<!--        <div id="to-do-items"></div>-->
+<!--    </section>-->
+<!--</main>-->
+
 <script src="./javascript/home.js" type="application/javascript"></script>
 </body>
 </html>

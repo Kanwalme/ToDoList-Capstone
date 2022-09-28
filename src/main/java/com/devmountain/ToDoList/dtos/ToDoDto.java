@@ -14,8 +14,8 @@ public class ToDoDto implements Serializable {
 
     private Long id;
     private String item;
-    private String date;
-    private Boolean completed;
+//    private String date;
+//    private Boolean completed;
 
     private UserDto userDto;
 

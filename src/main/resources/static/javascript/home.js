@@ -1,3 +1,6 @@
+//todo-list
+
+
 
 //Cookie
 const cookieArr = document.cookie.split("=")
@@ -94,7 +97,7 @@ const createTodoCards = (array) => {
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
                     <p class="card-text">${obj.body}</p>
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
+                        <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Complete</button>
                         <button onclick="getToDoItemById(${obj.id})" type="button" class="btn btn-primary" 
                         data-bs-toggle="modal" data-bs-target="#todo-edit-modal">
                         Edit

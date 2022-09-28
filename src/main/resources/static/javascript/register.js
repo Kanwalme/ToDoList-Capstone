@@ -18,13 +18,12 @@ const handleSubmit = async (e) =>{
         password: registerPassword.value
     }
 
-    const response = await fetch(`${baseUrl}/register`, {
+    const response = await fetch(`http://localhost:8080/api/v1/users/register`, {
         method: "POST",
         body: JSON.stringify(bodyObj),
         headers: headers
 
     })
-        .then(()=>console.log("successfully ran"))
         .catch(err => console.error(err.message))
 
     const responseArr = await response.json()
