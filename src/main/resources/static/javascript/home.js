@@ -23,7 +23,7 @@ const baseUrl = "http://localhost:8080/api/v1/toDo/"
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
-        body: document.getElementById("todo-input").value
+        item: document.getElementById("todo-input").value
     }
     await addToDoItem(bodyObj);
     document.getElementById("todo-input").value = ''
@@ -95,7 +95,7 @@ const createTodoCards = (array) => {
         toDoCard.innerHTML = `
             <div class="card d-flex" style="width: 18rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    <p class="card-text">${obj.body}</p>
+                    <p class="card-text">${obj.item}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Complete</button>
                         <button onclick="getToDoItemById(${obj.id})" type="button" class="btn btn-primary" 
