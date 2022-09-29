@@ -23,10 +23,13 @@ const baseUrl = "http://localhost:8080/api/v1/toDo/"
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
-        item: document.getElementById("todo-input").value
+        item: document.getElementById("todo-input").value,
+        date: document.getElementById("todo-date").value
+
     }
     await addToDoItem(bodyObj);
     document.getElementById("todo-input").value = ''
+        document.getElementById("todo-date").value= ''
 }
 
 async function addToDoItem(obj) {
@@ -90,12 +93,14 @@ async function handleTodoEdit(toDoId){
 const createTodoCards = (array) => {
     todoContainer.innerHTML = ''
     array.forEach(obj => {
+        console.log(obj)
         let toDoCard = document.createElement("div")
         toDoCard.classList.add("m-2")
         toDoCard.innerHTML = `
             <div class="card d-flex" style="width: 18rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
                     <p class="card-text">${obj.item}</p>
+                    <p class="card-text">${obj.date}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Complete</button>
                         <button onclick="getToDoItemById(${obj.id})" type="button" class="btn btn-primary" 
@@ -109,12 +114,12 @@ const createTodoCards = (array) => {
         todoContainer.append(toDoCard);
     })
 }
-function handleLogout(){
-    let c = document.cookie.split(";");
-    for(let i in c){
-        document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
-    }
-}
+// function handleLogout(){
+//     let c = document.cookie.split(";");
+//     for(let i in c){
+//         document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+//     }
+// }
 
 const populateModal = (obj) =>{
     todoBody.innerText = ''

@@ -21,9 +21,9 @@ public class ToDo {
     @Column(columnDefinition = "text")
     private String item;
 
-//    @Column
-//    private String date;
-//
+    @Column
+    private String date;
+
 //    @Column
 //    private Boolean completed;
 
@@ -36,9 +36,9 @@ public class ToDo {
         if (toDoDto.getItem() != null) {
             this.item = toDoDto.getItem();
         }
-//        if (toDoDto.getDate() != null) {
-//            this.date = toDoDto.getDate();
-//        }
+        if (toDoDto.getDate() != null) {
+            this.date = toDoDto.getDate();
+        }
 //        this.completed = toDoDto.getCompleted();
 //
     }

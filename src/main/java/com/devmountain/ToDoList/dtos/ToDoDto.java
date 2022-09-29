@@ -26,9 +26,9 @@ public class ToDoDto implements Serializable {
         if (toDo.getItem() != null) {
             this.item = toDo.getItem();
         }
-//        if (toDo.getDate() != null) {
-//            this.date = toDo.getDate();
-//        }
+        if (toDo.getDate() != null) {
+            this.date = toDo.getDate();
+        }
 //       this.completed = toDo.getCompleted();
 //        this.completed = false;
         }
