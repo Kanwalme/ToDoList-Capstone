@@ -1,6 +1,3 @@
-//todo-list
-
-
 
 //Cookie
 const cookieArr = document.cookie.split("=")
@@ -130,9 +127,11 @@ const createTodoCards = (array) => {
 
 const populateModal = (obj) =>{
     console.log("populateModal func")
-    todoBody.innerText = ''
-    todoBody.innerText = obj.item
-    todoDate.innerText = obj.date
+    console.log(obj.item)
+    todoBody.value= ''
+    todoBody.value = obj.item
+    todoDate.value = obj.date
+    console.log(obj)
     updateTodoBtn.setAttribute('data-todo-id', obj.id)
 }
 
