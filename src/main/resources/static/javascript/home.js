@@ -11,7 +11,8 @@ const submitForm = document.getElementById("todo-form")
 const todoContainer = document.getElementById("todo-container")
 
 //Modal Elements
-let todoBody = document.getElementById(`todo-body`)
+let todoBody = document.getElementById(`todo-edit-item`)
+let todoDate = document.getElementById(`todo-edit-date`)
 let updateTodoBtn = document.getElementById('update-todo-button')
 
 const headers = {
@@ -45,6 +46,7 @@ async function addToDoItem(obj) {
 }
 
 async function getTodo(userId) {
+    console.log("getToDo func")
     await fetch(`${baseUrl}user/${userId}`, {
         method: "GET",
         headers: headers
@@ -65,10 +67,13 @@ async function handleDelete(toDoId){
 }
 
 async function getToDoItemById(toDoId){
+    console.log("getToDoItemById func" + toDoId)
     await fetch(baseUrl + toDoId, {
         method: "GET",
         headers: headers
+
     })
+
         .then(res => res.json())
         .then(data => populateModal(data))
         .catch(err => console.error(err.message))
@@ -77,7 +82,8 @@ async function getToDoItemById(toDoId){
 async function handleTodoEdit(toDoId){
     let bodyObj = {
         id: toDoId,
-        body: todoBody.value
+        item: todoBody.value,
+        date:todoDate.value
     }
 
     await fetch(baseUrl, {
@@ -91,17 +97,18 @@ async function handleTodoEdit(toDoId){
 }
 
 const createTodoCards = (array) => {
+    console.log("createTodoCards func")
     todoContainer.innerHTML = ''
     array.forEach(obj => {
         console.log(obj)
         let toDoCard = document.createElement("div")
         toDoCard.classList.add("m-2")
         toDoCard.innerHTML = `
-            <div class="card d-flex" style="width: 18rem; height: 18rem;">
+            <div class="card d-flex" style="width: 50rem; height: 15rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
                     <p class="card-text">${obj.item}</p>
                     <p class="card-text">${obj.date}</p>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-flex-start">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Complete</button>
                         <button onclick="getToDoItemById(${obj.id})" type="button" class="btn btn-primary" 
                         data-bs-toggle="modal" data-bs-target="#todo-edit-modal">
@@ -111,7 +118,7 @@ const createTodoCards = (array) => {
                 </div>
             </div>
         `
-        todoContainer.append(toDoCard);
+        todoContainer.prepend(toDoCard);
     })
 }
 // function handleLogout(){
@@ -122,8 +129,10 @@ const createTodoCards = (array) => {
 // }
 
 const populateModal = (obj) =>{
+    console.log("populateModal func")
     todoBody.innerText = ''
-    todoBody.innerText = obj.body
+    todoBody.innerText = obj.item
+    todoDate.innerText = obj.date
     updateTodoBtn.setAttribute('data-todo-id', obj.id)
 }
 

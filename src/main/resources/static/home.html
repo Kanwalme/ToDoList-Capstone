@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body>
-<!--<a class="btn navbar-btn btn-default" href="./login.html" onclick="handleLogout()">Logout</a>-->
+
 
 <div class="topnav">
     <!-- Navbar -->
@@ -23,34 +23,6 @@
         <div class="col-md-12">
             <div class="card card-white">
                 <div class="card-body">
-<!--                    <div id="todo-form">-->
-<!--                    <form action="javascript:void(0);" >-->
-<!--                        <input type="text" class="form-control add-task" id="todo-input" placeholder="New Task...">-->
-<!--                        <button id="submit-button" type="submit" class="btn btn-success ">Add</button>-->
-<!--                    </form>-->
-<!--                    <div id="todo-container" class="container-fluid"></div>-->
-
-<!--items already added to list-->
-<!--                    <div class="todo-list">-->
-<!--                        <div class="todo-item">-->
-<!--                            <span>Complete Parts 1-3 of Java Course on Udemy</span>-->
-<!--                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>-->
-<!--                        </div>-->
-<!--                        <div class="todo-item">-->
-<!--                            <span>Work on resume</span>-->
-<!--                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>-->
-<!--                        </div>-->
-
-<!--                        <div class="todo-item">-->
-<!--                            <span>Apply for 3 jobs today!</span>-->
-<!--                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>-->
-<!--                        </div>-->
-<!--                        <div class="todo-item">-->
-<!--                            <span>Organize office area</span>-->
-<!--                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--</div>-->
 
 <!--new to do list format--> <header>
                             <h1>To Do List</h1>
@@ -76,8 +48,10 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body d-flex">
-                                    <span class="form-control" id="todo-body"></span>
+                                    <textarea class="form-control" id="todo-edit-item"></textarea>
                                 </div>
+                                <div><textarea class="form-control" id="todo-edit-date"></textarea></div>
+
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     <button type="button" id="update-todo-button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
@@ -91,20 +65,6 @@
     </div>
 </div>
 
-<!--<header>-->
-<!--    <h1>To Do List</h1>-->
-<!--    <form id="new-todo-form">-->
-<!--        <input type="text" name="new-todo-input" id="new-todo-input placeholder="New Task..." />-->
-<!--        <input type="submit" id="new-todo-submit"  value="Add" />-->
-<!--    </form>-->
-<!--</header>-->
-<!--<main>-->
-<!--    <section class="todo-list">-->
-<!--        <h2>Today's Tasks</h2>-->
-
-<!--        <div id="to-do-items"></div>-->
-<!--    </section>-->
-<!--</main>-->
 
 <script src="./javascript/home.js" type="application/javascript"></script>
 </body>
