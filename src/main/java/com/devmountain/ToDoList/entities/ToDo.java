@@ -25,7 +25,7 @@ public class ToDo {
     private String date;
 
 //    @Column
-//    private Boolean completed;
+//    private String prior;
 
 
     @ManyToOne

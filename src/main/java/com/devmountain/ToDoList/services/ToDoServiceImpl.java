@@ -45,7 +45,6 @@ public class ToDoServiceImpl implements ToDoService {
         toDoOptional.ifPresent(toDo -> {
             toDo.setItem(toDoDto.getItem());
             toDo.setDate(toDoDto.getDate());
-//            toDo.setCompleted(toDoDto.getCompleted());
             toDoRepository.saveAndFlush(toDo);
         });
 }

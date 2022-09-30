@@ -15,7 +15,6 @@ public class ToDoDto implements Serializable {
     private Long id;
     private String item;
     private String date;
-//    private Boolean completed;
 
     private UserDto userDto;
 
@@ -29,8 +28,7 @@ public class ToDoDto implements Serializable {
         if (toDo.getDate() != null) {
             this.date = toDo.getDate();
         }
-//       this.completed = toDo.getCompleted();
-//        this.completed = false;
+
         }
 
     }

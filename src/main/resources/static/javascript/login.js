@@ -25,7 +25,12 @@ const handleSubmit = async (e) =>{
 
     const responseArr = await response.json()
 
-    if (response.status === 200){
+    if(loginUsername.value == "" || loginPassword == "") {
+        console.log ("user not found");
+        alert ("Please enter a valid username or password");
+    }
+
+    else if (response.status === 200){
         document.cookie = `userId=${responseArr[1]}`
         window.location.replace(responseArr[0])
     }
