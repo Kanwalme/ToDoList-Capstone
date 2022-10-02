@@ -42,7 +42,7 @@ registerForm.addEventListener("submit", handleSubmit)
 //quote generator
 const text=document.getElementById("quote");
 const author=document.getElementById("author");
-const tweetButton=document.getElementById("tweet");
+// const tweetButton=document.getElementById("tweet");
 
 const getNewQuote = async () =>
 {
@@ -73,8 +73,8 @@ const getNewQuote = async () =>
     text.innerHTML=quote;
     author.innerHTML="~ "+auth;
 
-    //tweet the quote
-    tweetButton.href="https://twitter.com/intent/tweet?text="+quote+" ~ "+auth;
+    // //tweet the quote
+    // tweetButton.href="https://twitter.com/intent/tweet?text="+quote+" ~ "+auth;
 
 }
 
