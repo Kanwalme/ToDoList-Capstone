@@ -101,8 +101,10 @@ const createTodoCards = (array) => {
         let toDoCard = document.createElement("div")
         toDoCard.classList.add("m-2")
         toDoCard.innerHTML = `
-            <div class="card d-flex" style="width: 50rem; height: 15rem;">
-                <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
+<!--            <div class="card d-flex" style="width: 50rem; height: 15rem;">-->
+<!--                <div class="card-body d-flex flex-column  justify-content-between" id = "card-body" style="height: available">-->
+           <div>
+            <div id ="card-body">
                     <p class="card-text">${obj.item}</p>
                     <p class="card-text">${obj.date}</p>
                     <div class="d-flex justify-content-flex-start">

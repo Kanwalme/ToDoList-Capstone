@@ -1,49 +1,49 @@
-body{
-    margin-top:20px;
-    background: #f8f8f8;
+/*body{*/
+/*    margin-top:20px;*/
+/*    background: darkred;*/
+/*}*/
+
+/*.todo-list {*/
+/*    margin: 10px 0*/
+/*}*/
+
+/*.todo-list {*/
+/*    padding: 15px;*/
+/*    margin: 5px 0;*/
+/*    border-radius: 0;*/
+/*    background: blue;*/
+/*}*/
+
+/*div.button, div.button * {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*div.button {*/
+/*    display: -moz-inline-box;*/
+/*    display: inline-block;*/
+/*    zoom: 1;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.card {*/
+/*    padding: 25px;*/
+/*    margin-bottom: 20px;*/
+/*    border: initial;*/
+/*    background: green;*/
+/*    border-radius: calc(.15rem - 1px);*/
+/*    box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);*/
+/*}*/
+#card-body {
+display: flex;
+    justify-content: space-between;
 }
-
-.todo-nav {
-    margin-top: 10px
+#todo-input {
+    padding-left: 20px;
 }
-
-.todo-list {
-    margin: 10px 0
-}
-
-.todo-list .todo-item {
-    padding: 15px;
-    margin: 5px 0;
-    border-radius: 0;
-    background: #f7f7f7
-}
-
-
- div.uploader {
-    position: relative;
-}
-
-div.button, div.button *,  div.selector, div.selector *, div.uploader, div.uploader * {
-    margin: 0;
-    padding: 0;
-}
-
-div.button, div.selector, div.uploader {
-    display: -moz-inline-box;
-    display: inline-block;
-    zoom: 1;
-    vertical-align: middle;
-}
-
-.card {
-    padding: 25px;
-    margin-bottom: 20px;
-    border: initial;
-    background: #fff;
-    border-radius: calc(.15rem - 1px);
-    box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
-}
-
+/*nowrapdiv * {*/
+/*    background-color: yellow;*/
+/*}*/
 
 
 
