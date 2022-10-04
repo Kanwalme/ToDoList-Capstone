@@ -1,60 +1,68 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/watercolour-background-with-leaves_91008-314.jpg?w=996&t=st=1664898844~exp=1664899444~hmac=f344733e4087c379612484b9ff0b8e6ab57a7017573ade1ed776ee2102e03f08");
 
+    height: 100%;
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #card-body {
 display: flex;
     justify-content: space-between;
 }
-#todo-input {
-    padding-left: 20px;
+.card{
+    border: black 1px;
 }
-
 #todo-container {
     border-top: 2px solid gray;
     grid-column: 1 / 5;
 }
 .button1{
-
-    border: none;
-    background-color: darkseagreen;
+    background-color: #DDE5E3;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     margin-right: 50px;
+    border: 1px solid black
 }
 .button2{
-    border: none;
-    background-color: lightskyblue;
+    background-color: #EDDCC8;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
+    border: 1px solid black
 }
-.btn navbar-btn {
-    border: none;
-    background-color: palevioletred;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
+.navbar-btn {
+    border-color: black;
+    padding: 6px 12px;
+    margin: 0px 0px 0px 10px;
 }
+
 #card-body {
     border-bottom: 1px solid gray;
     grid-column: 1 / 5;
 }
-#todo-form {
-    display: flex;
-    justify-content: center;
-}
+
 h1 {
     text-align: center;
     padding: 15px;
 }
 #todo-input{
-    margin-right: 50px;
+    margin-right: 40px;
 }
 #todo-date {
-    margin-right: 40px;
+    margin-right: 30px;
+}
+#todo-form {
+    max-width: max-content;
+    margin: auto;
+}
+#update-todo-button{
+    background-color: #c1b19d;
 }

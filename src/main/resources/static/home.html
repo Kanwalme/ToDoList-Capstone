@@ -17,19 +17,19 @@
           crossorigin="anonymous"></head>
 </head>
 <body>
-<a class="btn navbar-btn" href="./login.html" onclick="handleLogout()">Log Out</a>
+<a class="navbar-btn" id= "navbar-btn" href="./login.html" onclick="handleLogout()">Log Out</a>
 <!--adding new to do tasks-->
 <div class="container" id="home-container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card card-white">
+            <div class="card" id="card">
                 <div class="card-body">
 
                          <header id = "header">
                             <h1>To Do List</h1>
                             <form id="todo-form">
-                                <input type="text" name="new-todo-input" id="todo-input" placeholder="New Task..."required = "true"/>
-                                <input type="text" name="new-todo-input" id="todo-date" placeholder="Completion date..."required = "true"/>
+                             <b>Task: </b> <input type="text" name="new-todo-input" id="todo-input" placeholder="New Task..."required = "true"/>
+                              <b>Complete by: </b>  <input type="text" name="new-todo-input" id="todo-date" placeholder=" Date..."required = "true"/>
                                 <input type="submit" id="new-todo-submit"  value="Add" />
                                 <br>
                                 <br>
@@ -53,13 +53,17 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="todo-edit-modal-title">Edit your to-do item</h5>
+                <h5 class="modal-title" id="todo-edit-modal-title">Edit Task</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body d-flex">
-                <textarea class="form-control" id="todo-edit-item"></textarea>
-            </div>
-            <div><textarea class="form-control" id="todo-edit-date"></textarea></div>
+            <div>
+                <label for= "todo-edit-item">Task:</label>
+                <br>
+                <input type="text" class="form-control" id="todo-edit-item"/></div>
+            <div>
+                <label for= "todo-edit-date">Date:</label>
+                <br>
+                <input type ="text" class="form-control" id="todo-edit-date"/></div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
