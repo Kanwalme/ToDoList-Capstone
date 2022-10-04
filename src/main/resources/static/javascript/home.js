@@ -108,10 +108,10 @@ const createTodoCards = (array) => {
                     <p class="card-text">${obj.item}</p>
                     <p class="card-text">${obj.date}</p>
                     <div class="d-flex justify-content-flex-start">
-                        <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Complete</button>
-                        <button onclick="getToDoItemById(${obj.id})" type="button" class="btn btn-primary" 
+                        <button class="button1" onclick="handleDelete(${obj.id})" >✓</button>
+                        <button onclick="getToDoItemById(${obj.id})" type="button" class="button2" 
                         data-bs-toggle="modal" data-bs-target="#todo-edit-modal">
-                        Edit
+                        ✎
                         </button>
                     </div>
                 </div>
