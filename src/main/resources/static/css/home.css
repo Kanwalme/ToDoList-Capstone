@@ -12,8 +12,9 @@ body{
 display: flex;
     justify-content: space-between;
 }
-.card{
-    border: black 1px;
+#card{
+    border-style:solid;
+    border-color: #b99976;
 }
 #todo-container {
     border-top: 2px solid gray;
@@ -39,6 +40,7 @@ display: flex;
     border: 1px solid black
 }
 .navbar-btn {
+    border-style: solid;
     border-color: black;
     padding: 6px 12px;
     margin: 0px 0px 0px 10px;
