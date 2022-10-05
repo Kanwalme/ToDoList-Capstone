@@ -30,7 +30,6 @@ const handleSubmit = async (e) =>{
 
 
         if (response.status === 200){
-        console.log(responseArr[0])
         window.location.replace(responseArr[0])
     }
 }

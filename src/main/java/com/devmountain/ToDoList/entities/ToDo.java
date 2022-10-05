@@ -24,10 +24,6 @@ public class ToDo {
     @Column
     private String date;
 
-//    @Column
-//    private String prior;
-
-
     @ManyToOne
     @JsonBackReference
     private User user;
@@ -39,8 +35,7 @@ public class ToDo {
         if (toDoDto.getDate() != null) {
             this.date = toDoDto.getDate();
         }
-//        this.completed = toDoDto.getCompleted();
-//
+
     }
 }
 

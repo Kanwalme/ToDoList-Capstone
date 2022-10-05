@@ -43,7 +43,6 @@ async function addToDoItem(obj) {
 }
 
 async function getTodo(userId) {
-    console.log("getToDo func")
     await fetch(`${baseUrl}user/${userId}`, {
         method: "GET",
         headers: headers
@@ -64,7 +63,6 @@ async function handleDelete(toDoId){
 }
 
 async function getToDoItemById(toDoId){
-    console.log("getToDoItemById func" + toDoId)
     await fetch(baseUrl + toDoId, {
         method: "GET",
         headers: headers
@@ -101,14 +99,13 @@ const createTodoCards = (array) => {
         let toDoCard = document.createElement("div")
         toDoCard.classList.add("m-2")
         toDoCard.innerHTML = `
-<!--            <div class="card d-flex" style="width: 50rem; height: 15rem;">-->
-<!--                <div class="card-body d-flex flex-column  justify-content-between" id = "card-body" style="height: available">-->
+
            <div>
             <div id ="card-body">
                     <p class="card-text">${obj.item}</p>
                     <p class="card-text">${obj.date}</p>
                     <div class="d-flex justify-content-flex-start">
-                        <button class="button1" onclick="handleDelete(${obj.id})" >✓</button>
+                        <button class="button1" onclick="handleDelete(${obj.id})" >✓ </button>
                         <button onclick="getToDoItemById(${obj.id})" type="button" class="button2" 
                         data-bs-toggle="modal" data-bs-target="#todo-edit-modal">
                         ✎
